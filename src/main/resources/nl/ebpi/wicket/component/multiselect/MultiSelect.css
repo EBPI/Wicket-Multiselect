@@ -1,0 +1,197 @@
+/*
+ * Copyright 2016 EBPI (https://www.ebpi.nl)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+div.multi-select {
+    display: block;
+    margin: 0;
+    padding: 0;
+    float: left;
+    min-width: 440px;
+}
+
+div.multi-select-choices, div.multi-select-selection {
+    float: left;
+}
+
+div.multi-select ol.multi-select-list {
+    display: block;
+    padding: 0;
+    padding-left: 0;
+    margin: 0;
+    float: left;
+    display: block;
+    border: 1px solid gray;
+    clear: both;
+    background-color: white;
+    cursor: default;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.multi-select ol.multi-select-list li {
+    display: block;
+    padding: 0;
+    margin: 0;
+    clear: both;
+    float: left;
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    padding: 0 2px 0 2px;
+    width: 100%;
+}
+
+div.multi-select ol.multi-select-list li:hover {
+    background-color: #eeeeee;
+}
+
+div.multi-select ol.multi-select-list li.selected, div.multi-select ol.multi-select-list li.selected:hover {
+    background-color: rgba(255, 140, 0, .5);
+}
+
+div.multi-select button.multi-select-clear-filter {
+    float: left;
+    width: 16px;
+    height: 16px;
+    border: none;
+    margin: 4px 0 4px -19px;
+    padding: 0;
+    cursor: pointer;
+    background: white url(clear.png) no-repeat;
+}
+
+div.multi-select input.filter::-ms-clear {
+    display: none;
+}
+
+div.multi-select input.filter {
+    border: none;
+    float: left;
+    height: 24px;
+    width: 100%;
+    padding-left: 22px;
+    padding-right: 20px;
+    background: white url(search.png) no-repeat 4px 4px;
+}
+
+div.multi-select .multi-select-filter-panel {
+    float: left;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.multi-select-vertical, .multi-select-vertical .multi-select-buttons {
+    min-width: 440px;
+    width: 440px;
+}
+
+.multi-select-vertical ol.multi-select-list {
+    height: 160px;
+    min-height: 160px;
+}
+
+.multi-select-vertical .multi-select-filter-panel, .multi-select-vertical ol.multi-select-list {
+    min-width: 438px;
+    width: 438px;
+}
+
+.multi-select-horizontal .multi-select-filter-panel, .multi-select-horizontal ol.multi-select-list {
+    width: 198px;
+}
+
+.multi-select-horizontal ol.multi-select-list {
+    height: 240px;
+    min-height: 240px;
+}
+
+.multi-select-buttons {
+    display: block;
+    float: left;
+}
+
+.multi-select-buttons button {
+    width: 36px;
+    height: 36px;
+    margin: 2px;
+    background: #154273 2px 2px no-repeat;
+    border: none;
+}
+
+.multi-select-horizontal .multi-select-buttons {
+    width: 40px;
+    height: 240px;
+}
+
+.multi-select-vertical .multi-select-buttons {
+    text-align: center;
+}
+
+.multi-select-vertical .multi-select-buttons button {
+    display: inline-block;
+    float: unset;
+}
+
+.multi-select-horizontal button.multi-select-button-add-all {
+    background-image: url(h-add-all.png);
+}
+
+.multi-select-vertical button.multi-select-button-add-all {
+    background-image: url(v-add-all.png);
+}
+
+.multi-select-horizontal button.multi-select-button-add {
+    background-image: url(h-add.png);
+}
+
+.multi-select-vertical button.multi-select-button-add {
+    background-image: url(v-add.png);
+}
+
+.multi-select-horizontal button.multi-select-button-remove {
+    background-image: url(h-remove.png);
+}
+
+.multi-select-vertical button.multi-select-button-remove {
+    background-image: url(v-remove.png);
+}
+
+.multi-select-horizontal button.multi-select-button-remove-all {
+    background-image: url(h-remove-all.png);
+}
+
+.multi-select-vertical button.multi-select-button-remove-all {
+    background-image: url(v-remove-all.png);
+}
+
+button.multi-select-button-move-up {
+    background-image: url(up.png);
+}
+
+button.multi-select-button-move-down {
+    background-image: url(down.png);
+}
+
+.multi-select-buttons button:disabled {
+    background-color: lightgray;
+    cursor: default;
+}
