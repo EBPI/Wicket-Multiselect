@@ -3,7 +3,7 @@
 
   <groupId>nl.ebpi.wicket</groupId>
   <artifactId>multiselect</artifactId>
-  <version>0.9-SNAPSHOT</version>
+  <version>0.8</version>
   <packaging>jar</packaging>
 
   <name>Wicket MultiSelect</name>
