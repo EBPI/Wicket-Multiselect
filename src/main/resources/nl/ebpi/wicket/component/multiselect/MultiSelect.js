@@ -101,12 +101,12 @@
 
                     // Add listeners to respond to changing search-filters
                     multiSelect.find("input.filter").keyup(function() {
-                        doFilter(multiSelect, $(this));
+                        doFilter(multiSelect, $(this), config);
                     });
 
                     // Add click-listeners on buttons that clear their search field
                     multiSelect.find("button.multi-select-clear-filter").click(function(evt) {
-                        clearFilter(multiSelect, $(this), evt);
+                        clearFilter(multiSelect, $(this), evt, config);
                     });
 
                     // Properly position the buttons inside their container
@@ -700,6 +700,7 @@
 
             if(filterText != previousFilterText) {
                 enclosingDiv.find("ol.multi-select-list").html("");
+                updateStateOfButtons(multiSelect, config);
                 addWorkerTask(multiSelect, {
                     command: "filter",
                     options: multiSelect.prop("options"),
@@ -716,7 +717,7 @@
                 evt.preventDefault();
                 evt.stopPropagation();
             }
-            doFilter(multiSelect, clearFilterButton.parent().find("input.filter").val("").focus());
+            doFilter(multiSelect, clearFilterButton.parent().find("input.filter").val("").focus(), config);
         }
 
         // Function that gets called to clear the selection filter of the selection box.
@@ -726,7 +727,7 @@
                 if(selectionSelect.val()) {
                     // Clear filter
                     selectionSelect.val("");
-                    doFilter(multiSelect, selectionSelect);
+                    doFilter(multiSelect, selectionSelect, config);
                 }
             }
         }
